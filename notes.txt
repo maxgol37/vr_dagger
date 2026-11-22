@@ -1,0 +1,31 @@
+all the dockers
+
+
+(miniconda3) isr-lab-4@isr-lab-4:~/Kosenkov/ur3-vr-teleoperation$ docker ps -a 
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED        STATUS                      PORTS                                                                   NAMES
+22b4ff7e05bd   ur3-vr-teleoperation:humble           "/entrypoint.sh rtde…"   3 hours ago    Up 3 hours                                                                                          ur3-vr-teleoperation-teleop-1
+5fffe563607c   vr-dagger-capture:humble              "/ros_entrypoint.sh …"   4 days ago     Up 4 days                                                                                           vr-dagger-capture-button_recorder-1
+395957ed6cc2   vr-dagger-capture:humble              "/ros_entrypoint.sh …"   4 days ago     Exited (1) 3 days ago                                                                               vr-dagger-capture-cameras-1
+5d53bc0e868a   vr-dagger-capture:humble              "/ros_entrypoint.sh …"   4 days ago     Up 4 days                                                                                           vr-dagger-capture-dagger_bridge-1
+f7d90aeb07be   mws-sim-dimos:latest                  "/entrypoint.sh /wor…"   3 months ago   Exited (255) 3 months ago                                                                           mws-sim-sim-dimos-robot-1
+2149520adadd   mws-sim-dimos:latest                  "/entrypoint.sh /wor…"   3 months ago   Exited (255) 3 months ago   0.0.0.0:7778->7778/tcp, [::]:7778->7778/tcp, 127.0.0.1:9877->9877/tcp   mws-sim-sim-dimos-server-1
+40a4bd16ff03   mws-sim-gear-sonic-policy:latest      "/entrypoint.sh /usr…"   3 months ago   Exited (0) 3 months ago                                                                             mws-sim-sim-gear-sonic-1
+304ccf6f4f77   mws-dimos/sim-isaac:unitree-lab-5.1   "/entrypoint.sh /wor…"   3 months ago   Exited (137) 3 months ago                                                                           mws-sim-sim-isaac-1
+55fb12589d8a   mws-voice-tts:latest                  "python server.py"       3 months ago   Exited (255) 3 months ago                                                                           mws-voice-tts
+889ad6381d54   mws-voice-asr:latest                  "python server.py"       3 months ago   Exited (255) 3 months ago                                                                           mws-voice-asr
+9fa44fd79385   coturn/coturn                         "docker-entrypoint.s…"   4 months ago   Exited (0) 4 months ago                                                                             gps-vr-coturn
+914830f0ef92   ce347a85e88f                          "/entrypoint.sh bash…"   4 months ago   Exited (137) 4 months ago                                                                           mws-sim-dimos
+c13a865884d0   2978f7485e69                          "/entrypoint.sh /usr…"   4 months ago   Exited (0) 4 months ago                                                                             mws-sim-gear-sonic-policy
+ed1d7d620b91   60f32e8c8150                          "/entrypoint.sh /bin…"   4 months ago   Exited (137) 4 months ago                                                                           mws-sim-isaac
+ea73a42fdec0   decoupled_wbc-deploy-isr-lab-4        "/opt/nvidia/nvidia_…"   5 months ago   Exited (137) 4 months ago                                                                           decoupled_wbc-bash-isr-lab-4
+
+
+
+active dockers
+
+
+(miniconda3) isr-lab-4@isr-lab-4:~/Kosenkov/ur3-vr-teleoperation$ docker ps 
+CONTAINER ID   IMAGE                         COMMAND                  CREATED       STATUS       PORTS     NAMES
+22b4ff7e05bd   ur3-vr-teleoperation:humble   "/entrypoint.sh rtde…"   3 hours ago   Up 3 hours             ur3-vr-teleoperation-teleop-1
+5fffe563607c   vr-dagger-capture:humble      "/ros_entrypoint.sh …"   4 days ago    Up 4 days              vr-dagger-capture-button_recorder-1
+5d53bc0e868a   vr-dagger-capture:humble      "/ros_entrypoint.sh …"   4 days ago    Up 4 days              vr-dagger-capture-dagger_bridge-1
