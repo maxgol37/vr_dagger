@@ -1,0 +1,47 @@
+TO STOP BACKEND
+xactly. Run each command from its corresponding repository:
+
+From ~/Kosenkov/vr-dagger:
+bash scripts/workflow.sh backend mode STOP
+
+From ~/Kosenkov/ur3-vr-teleoperation:
+./scripts/run.sh mode STOP
+Both request the same STOP mode. Both commands run in your host terminal, outside the container
+
+
+
+./scripts/run.sh shell opens a Bash shell in ur3-vr-teleoperation-teleop-1, the Docker Compose service named teleop.
+
+That container runs the ROS 2 backend: RTDE robot feedback/control, MoveIt Servo, and the ROS-TCP endpoint connecting Unity.
+
+
+TO open container
+
+./scripts/run.sh shell
+
+source /opt/ros/humble/setup.bash
+source /ws/install/setup.bash
+ros2 topic echo /joint_states
+
+
+
+exit
+
+
+
+
+
+######################3 CAMERAS #################################3
+
+bash scripts/workflow.sh cameras
+bash scripts/workflow.sh check
+
+bash scripts/workflow.sh record demonstration start
+bash scripts/workflow.sh record demonstration logs
+bash scripts/workflow.sh record demonstration stop
+
+When everything is good, logs should suggest to press "B"
+
+videos are in the cd ~/Kosenkov/vr-dagger/data/bags_clean_table
+
+after the conversion video will be in the folder  /home/isr-lab-4/Kosenkov/vr-dagger/data/lerobot_clean_table_v2/demo36/videos/
